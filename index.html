@@ -151,6 +151,52 @@
         </div>
       </section>
 
+
+      <!-- Seção Contatos -->
+       <section class="contato" id="contato">
+        <h2>Peça seu orçamento</h2>
+        <p>Chame no WhatsApp ou preencha o formulário. Respondemos o mais rápido possível.</p>
+        <div class="contato-botoes">
+          <a href="https://wa.me/5586994834007" class="botao botao-amarelo botao-grande">Chamar no WhatsApp</a>
+          <a href="tel:+5586994834007" class="botao botao-contorno botao-grande">Ligar:(86)99483-4007</a>
+        </div>
+
+        <form class="formulario" id="form-orcamento">
+          <div class="campo">
+            <label for="nome">Seu nome</label>
+            <input type="text" name="nome" id="nome" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="telefone-form">Seu WhatsApp</label>
+            <input type="tel" name="telefone" id="telefone-form" autocomplete="tel" placeholder="(86)99999-9999" required>
+          </div>
+          <div class="campo">
+            <label for="servico">O que você precisa?</label>
+            <select name="servico" id="servico" required>
+              <option value="" disabled selected>Escolha uma opção</option>
+              <option value="turismo">Turismo e excursões</option>
+              <option value="romarias">Romarias</option>
+              <option value="eventos">Eventos</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="data">Data da viagem</label>
+            <input type="date" name="data" id="data">
+          </div>
+          <div class="campo">
+            <label for="passageiros">Quantos passageiros?</label>
+            <input type="number" name="passageiros" id="passageiros" min="1" inputmode="numeric">
+          </div>
+          <div class="campo">
+            <label for="mensagem">Para onde vai? (opcional)</label>
+            <textarea name="mensagem" id="mensagem" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="botao botao-amarelo botao-grande">Pedir orçamento</button>
+        </form>
+       </section>
+
     </main>
 
   </body>

@@ -327,3 +327,82 @@ header {
 .servico a:hover {
     color: var(--azul-marinho);
 }
+
+
+/* Frota */
+.frota {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    background: var(--azul-marinho);
+    color: var(--branco);
+}
+
+.frota .subtitulo {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    color: var(--amarelo);
+    margin-bottom: 0.5rem;
+}
+
+.frota h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.frota p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.frota-lista {
+    display: flex;
+    gap: 1rem;
+    margin: 0 -1rem;
+    padding: 0 1rem 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 1rem;
+    scrollbar-width: none;
+}
+
+.frota-lista::-webkit-scrollbar {
+    display: none;
+}
+
+.veiculo {
+    flex: 0 0 80%;
+    max-width: 18rem;
+    scroll-snap-align: start;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--raio);
+}
+
+.veiculo img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.veiculo-info {
+    padding: 0.75rem 1rem 1rem;
+}
+
+.veiculo h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.veiculo p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+}

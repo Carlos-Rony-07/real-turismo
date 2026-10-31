@@ -263,3 +263,67 @@ header {
 }
 
 
+
+/* Serviços */
+.servicos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.25rem 1rem;
+    background: var(--fundo-claro);
+
+    position: relative;
+    z-index: 3;
+    margin-top: -1.5rem;
+}
+
+.servico {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    column-gap: 1rem;
+    row-gap: 0.25rem;
+    align-items: start;
+    padding: 1rem;
+    text-align: left;
+    background: var(--branco);
+    border-radius: var(--raio);
+    box-shadow: 0 2px 8px rgba(11, 42, 102, 0.1);
+}
+
+.servico-icone {
+    display: grid;
+    grid-row: span 3;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--azul-marinho);
+    color: var(--branco);
+}
+
+.serico h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--azul-marinho);
+}
+
+.servico p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #4a5568;
+}
+
+.servico a {
+    justify-self: start;
+    margin-top: 0.25rem;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--azul);
+    text-decoration: underline;
+}
+
+.servico a:hover {
+    color: var(--azul-marinho);
+}

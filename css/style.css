@@ -20,6 +20,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -66,7 +67,7 @@ button {
     padding: 0px;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
     white-space: nowrap;
     border: 0;
 }
@@ -107,4 +108,93 @@ button {
 .botao-grande {
     padding: 1rem 2rem;
     font-size: 1.125rem;
+}
+
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background: var(--branco);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.menu-botao {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.75rem;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.menu-botao span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: var(--azul-marinho);
+    border-radius: 2px;
+    transition: transform 0.25s, opacity 0.25s;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 1rem 1rem;
+    background: var(--branco);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12);
+}
+
+.menu-aberto {
+    display: block;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.menu a {
+    display: block;
+    padding: 0.875rem 1rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--azul-marinho);
+    border-radius: var(--raio);
+}
+
+.menu a:hover {
+    background: var(--fundo-claro);
+}
+
+.header-contato {
+    display: none;
+}
+
+/* Animação do hambúrguer em X */
+.menu-botao[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-botao[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-botao[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }

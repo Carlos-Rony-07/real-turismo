@@ -186,6 +186,12 @@ header {
     display: none;
 }
 
+.material-symbols-rounded {
+    font-size: 24px;
+    line-height: 1;
+    user-select: none;
+}
+
 /* Animação do hambúrguer em X */
 .menu-botao[aria-expanded="true"] span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
@@ -326,6 +332,10 @@ header {
 
 .servico a:hover {
     color: var(--azul-marinho);
+}
+
+.servico-icone .material-symbols-rounded {
+    font-size: 30px;
 }
 
 
@@ -606,7 +616,11 @@ header {
 }
 
 .rodape-social a {
-    padding: 0.5rem 1.25rem;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
     font-size: 1rem;
     font-weight: 600;
     border: 2px solid rgba(255, 255, 255, 0.4);
@@ -616,6 +630,11 @@ header {
 
 .rodape-social a:hover {
     background: rgba(255, 255, 255, 0.12);
+}
+
+.rodape-social svg {
+    width: 22px;
+    height: 22px;
 }
 
 .rodape-menu {
@@ -643,6 +662,9 @@ header {
 }
 
 .whatsapp-fixo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     position: fixed;
     right: 1rem;
     bottom: 1rem;
@@ -659,4 +681,14 @@ header {
 
 .whatsapp-fixo:hover {
     transform: translateY(-5px);
+}
+
+.whatsapp-fixo svg {
+    width: 24px;
+    height: 24px;
+}
+
+.servico-icone svg {
+    width: 28px;
+    height: 28px;
 }

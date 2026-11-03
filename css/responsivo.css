@@ -1,0 +1,12 @@
+/* Tablet */
+@media screen and (min-width: 768px) {
+    body {
+        
+    }
+}
+
+
+/* Desktop */
+@media screen (min-width: 1024px) {
+
+}

@@ -79,7 +79,54 @@
         font-weight: 700;
     }
 
+
+    /* Frota */
+    .frota {
+        padding: 3rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .frota-texto {
+        max-width: 40rem;
+    }
+
+    .frota h2 {
+        font-size: 2rem;
+    }
+
+    .frota-lista {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+        scroll-snap-type: none;
+    }
+
+    .veiculo {
+        max-width: none;
+    }
+
+    .veiculo h3 {
+        font-size: 1.125rem;
+    }
+
+    .veiculo p {
+        font-size: 1rem;
+    }
+
+    .veiculo:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .veiculo:last-child img {
+        aspect-ratio: 21 / 9;
+    }
+
 }
+
+
 
 
 /* Desktop */
@@ -228,6 +275,43 @@
 
     .servico a {
         justify-self: start;
+    }
+
+
+
+    /* Frota */
+    .frota {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+        align-items: start;
+        gap: 3rem;
+        padding-block: 3.5rem;
+        padding-inline: max(2rem, calc((100% - 1200px) / 2));
+    }
+
+    .frota-texto {
+        position: sticky;
+        top: 6rem;
+    }
+
+    .frota h2 {
+        font-size: 2.25rem;
+    }
+
+    .frota-lista {
+        gap: 1.5rem;
+    }
+
+    .veiculo {
+        transition: transform 0.2s;
+    }
+
+    .veiculo:hover {
+        transform: translateY(-4px);
+    }
+
+    .veiculo img {
+        aspect-ratio: 16 / 10;
     }
 
 }

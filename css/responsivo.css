@@ -37,6 +37,48 @@
         font-size: 1.25rem;
     }
 
+
+    /* Seriços */
+    .servicos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .servico {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+
+    .servico-icone {
+        grid-row: auto;
+        width: 64px;
+        height: 64px;
+    }
+
+    .servico a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        justify-self: center;
+        margin-top: 0.5rem;
+        text-decoration: none;
+    }
+
+    .servico a::after {
+        content: "→";
+        display: grid;
+        place-items: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background: var(--amarelo);
+        color: var(--azul-marinho);
+        font-weight: 700;
+    }
+
 }
 
 
@@ -146,6 +188,46 @@
 
     .hero-frase span {
         color: var(--amarelo);
+    }
+
+
+    /* Serviços */
+    .servicos {
+        gap: 1.5rem;
+        padding-block: 2.5rem;
+        padding-inline: max(2rem, calc((100% - 1200px) / 2));
+    }
+
+    .servico {
+        grid-template-columns: 72px 1fr;
+        column-gap: 1.25rem;
+        justify-items: start;
+        text-align: left;
+        padding: 1.5rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .servico:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(11, 42, 102, 0.15);
+    }
+
+    .servico-icone {
+        grid-row: span 3;
+        width: 72px;
+        height: 72px;
+    }
+
+    .servico-icone .material-symbols-rounded {
+        font-size: 36px;
+    }
+
+    .servico h3 {
+        font-size: 1.25rem;
+    }
+
+    .servico a {
+        justify-self: start;
     }
 
 }

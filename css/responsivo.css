@@ -286,6 +286,11 @@
         border-bottom-color: var(--amarelo);
     }
 
+    .menu a.ativo {
+        background: none;
+        border-block-color: var(--amarelo);
+    }
+
     .header-contato {
         display: flex;
         align-items: center;

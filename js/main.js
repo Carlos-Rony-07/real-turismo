@@ -25,8 +25,11 @@ const alternarMenu = () => {
 botaoMenu.addEventListener('click', alternarMenu);
 
 const linksMenu = document.querySelectorAll('.menu a');
-linksMenu.forEach( (link) => {
-    link.addEventListener('click', fecharMenu);
+linksMenu.forEach(function (link) {
+    link.addEventListener('click', function () {
+        fecharMenu();
+        marcarLink(link.getAttribute('href').slice(1));
+    });
 });
 
 document.addEventListener('keydown', (evento) => {
@@ -54,5 +57,34 @@ telaDesktop.addEventListener('change', (evento) => {
     if (evento.matches) {
         fecharMenu();
     }
+});
+
+
+// Marcar o link
+const secoes = document.querySelectorAll('main section[id]');
+const marcarLink = (id) => {
+    linksMenu.forEach((link) => {
+        const destino = '#' + id;
+
+        if (link.getAttribute('href') === destino) {
+            link.classList.add('ativo');
+        } else {
+            link.classList.remove('ativo');
+        }
+    });
+}
+
+const observador = new IntersectionObserver( (entradas) => {
+    entradas.forEach( (entrada) => {
+        if (entrada.isIntersecting) {
+            marcarLink(entrada.target.id);
+        }
+    });
+}, {
+    rootMargin: '-40% 0px -55% 0px'
+});
+
+secoes.forEach( (secao) => {
+    observador.observe(secao);
 });
 

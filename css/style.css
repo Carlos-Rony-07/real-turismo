@@ -190,6 +190,11 @@ header {
     border-radius: var(--raio);
 }
 
+.menu a.ativo {
+    background: var(--fundo-claro);
+    color: var(--azul);
+}
+
 .menu a:hover {
     background: var(--fundo-claro);
 }

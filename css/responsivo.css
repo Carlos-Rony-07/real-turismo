@@ -124,6 +124,32 @@
         aspect-ratio: 21 / 9;
     }
 
+
+
+    /* Destinos */
+    .destinos {
+        padding: 3rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .destinos-texto {
+        max-width: 40rem;
+    }
+
+    .destinos h2 {
+        font-size: 2rem;
+    }
+
+    .destinos-lista {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .destino span {
+        padding: 0.75rem 0.625rem;
+        font-size: 0.9375rem;
+    }
+
 }
 
 
@@ -312,6 +338,31 @@
 
     .veiculo img {
         aspect-ratio: 16 / 10;
+    }
+
+
+
+    /* Destinos */
+    .destinos {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+        align-items: center;
+        gap: 3rem;
+        padding-block: 3.5rem;
+        padding-inline: max(2rem, calc((100% - 1200px) / 2));
+    }
+
+    .destinos h2 {
+        font-size: 2.25rem;
+    }
+
+    .destinos-lista {
+        gap: 1.25rem;
+    }
+
+    .destino span {
+        font-size: 1rem;
+        padding: 0.875rem 0.75rem;
     }
 
 }

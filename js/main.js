@@ -88,3 +88,53 @@ secoes.forEach( (secao) => {
     observador.observe(secao);
 });
 
+
+const numeroWhatsApp = '5586994834007';
+const formulario = document.querySelector('#form-orcamento');
+
+formulario.addEventListener('submit', (evento) => {
+    evento.preventDefault();
+
+    const nome = document.querySelector("#nome").value.trim();
+    const telefone = document.querySelector("#telefone-form").value.trim();
+    const data = document.querySelector("#data").value;
+    const passageiros = document.querySelector("#passageiros").value;
+    const mensagem = document.querySelector("#mensagem").value.trim();
+    const selectServico = document.querySelector("#servico");
+    const servico = selectServico.options[selectServico.selectedIndex].text;
+    let dataFormatada = '';
+
+    if (data !== '') {
+        dataFormatada = data.split('-').reverse().join('/');
+    }
+
+    let texto = 'Olá! Gostaria de pedir um orçamento.';
+
+    texto += '\n\nNome: ' + nome;
+    texto += '\nTelefone: ' + telefone;
+    texto += '\nServiço: ' + servico;
+
+    if (dataFormatada !== '') {
+        texto += '\nData da viagem: ' + dataFormatada;
+    }
+
+    if (passageiros !== '') {
+        texto += '\nPassageiros: ' + passageiros;
+    }
+
+    if (mensagem !== '') {
+        texto += '\nDestino/observações: ' + mensagem;
+    }
+
+    const textoCodificado = encodeURIComponent(texto);
+    const url = 'https://wa.me/' + numeroWhatsApp + '?text=' + textoCodificado;
+
+    window.open(url, '_blank');
+
+    formulario.reset();
+});
+
+const campoData = document.querySelector("#data");
+const hoje = new Date().toLocaleDateString('en-CA');
+
+campoData.setAttribute('min', hoje);
